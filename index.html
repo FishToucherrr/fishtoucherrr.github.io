@@ -1,1 +1,101 @@
-hello
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Box 01</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(background.jpeg) no-repeat;
+            background-size: cover;
+        }
+        .container_baidu {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%, -50%);
+        }
+        .container_google {
+            position: absolute;
+            left: 50%;
+            top: 55%;
+            transform: translate(-50%, -50%);
+        }
+        .search-box {
+            position: relative;
+            background: rgba(25, 33, 59, 0.4);
+            height: 40px;
+            border-radius: 40px;
+            padding: 10px;
+            
+        }
+        .search-input {
+            position: relative;
+            border: none;
+            background: none;
+            outline: none;
+            color: white;
+            font-size: 22px;
+            line-height: 40px;
+            height: 40px;
+            width: 0px;
+            transition: .5s;
+            padding: 0px 40px 0 0;
+        }
+        .search-box:hover .search-input {
+            width: 400px;
+        }
+        .search-box:hover .search-btn {
+            background: white;
+        }
+        .search-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-decoration: none;
+            color: #e74c3c;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            transition: .5s;
+        }
+        .search-ico {
+            margin: 12px;
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container_baidu">
+        <div class="search-box">
+            <form action="http://www.baidu.com/s" method="GET" >
+            <input type="text" class="search-input" name="wd">
+            <a class="search-btn">
+                <div class="search-ico">
+            
+                    <input type="image" width="18px" src="baidu.svg"alt="Submit" >
+                </div>
+            </a>
+        </form>
+        </div>
+    </div>
+</body>
+<body>
+    <div class="container_google">
+        <div class="search-box">
+            <form method="get" action="http://www.google.com/search" >
+            <input type="text" class="search-input" name="q">
+            <a  class="search-btn">
+                <div class="search-ico">
+                    <input type="image" width="18px" src="google.svg"alt="Submit" >
+                </div>
+            </a></form>
+        </div>
+    </div>
+</body>
+</html>
